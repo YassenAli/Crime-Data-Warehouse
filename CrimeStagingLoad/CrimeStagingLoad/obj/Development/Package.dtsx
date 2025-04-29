@@ -1,0 +1,2510 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/28/2025 11:30:12 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="YASSIN-ALI"
+  DTS:CreatorName="YASSIN-ALI\Yassin"
+  DTS:DTSID="{D2DF5A3A-F7EB-48FF-9D2C-8059B5E48C60}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="71"
+  DTS:VersionGUID="{502A3346-4AA6-4998-A24E-7E0B07CF8B41}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ff_CrimeDataNormalized]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{D8F00EC9-D168-4AEA-8A5A-72E4E9F1EFC7}"
+      DTS:ObjectName="ff_CrimeDataNormalized">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="Y:\FCAI\Level 3\Second Semester\Data Warehouse\Assignments\Project\archive\CSVNormalized\CSVNormalized\BigTable.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="12"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Digital Record Number"
+              DTS:DTSID="{797E293D-4895-4720-9280-26ECDF514A3C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="133"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date Reported"
+              DTS:DTSID="{4F1B4FA9-67E3-4CF5-B579-A7FC9B933B0F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="133"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date of Occurrence"
+              DTS:DTSID="{D39C8932-1678-4612-A2D5-F7ED6B56B187}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Time of Occurrence"
+              DTS:DTSID="{74A3FE3F-AE39-4F01-A7DA-01551704CEC8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Area Name"
+              DTS:DTSID="{C94290E2-F056-47E8-8CC9-3FAB72E58797}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="7"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SubArea Number"
+              DTS:DTSID="{F98662ED-1F22-490A-8C06-EC2CB383D0AC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CrimeCodeDescription"
+              DTS:DTSID="{876A7AF4-5516-407F-A0AA-3D6246B4A86C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Victim Age"
+              DTS:DTSID="{477285E8-BE15-4D51-8805-C9F53C8DF46C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Victim Gender"
+              DTS:DTSID="{CC91B664-29C8-4314-BD92-A4D4CF3927DD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Victim OriginalCountry"
+              DTS:DTSID="{959BBC7D-81BE-4EB9-A38E-7FA36C77C0C4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="7"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Premise Code"
+              DTS:DTSID="{0D7CEACD-A3D4-4FE3-9AB8-2E8412422AFC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Weapon Description"
+              DTS:DTSID="{B292A15B-07FB-490B-BCD1-B14ED1281E11}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Status Desc"
+              DTS:DTSID="{6178EDAF-8E2F-4DE6-A073-EAD97FA30C70}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Latitude"
+              DTS:DTSID="{AF3B460D-FCD6-4627-A1D3-9BBAED8CFCFD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Longitude"
+              DTS:DTSID="{0FDE07AE-BFEF-4487-9010-73C80BFB83F0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Location"
+              DTS:DTSID="{42E3542B-37C8-4576-9BE4-B6DE90B46996}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Load_CrimeDataNormalized"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{A9B5694C-E852-436E-9D5B-6188CA9D8678}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load_CrimeDataNormalized"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Load_CrimeDataNormalized\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load_CrimeDataNormalized\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load_CrimeDataNormalized\Data Conversion.Inputs[Data Conversion Input].Columns[Date Reported]"
+                      cachedDataType="dbDate"
+                      cachedName="Date Reported"
+                      lineageId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Date Reported]" />
+                    <inputColumn
+                      refId="Package\Load_CrimeDataNormalized\Data Conversion.Inputs[Data Conversion Input].Columns[Date of Occurrence]"
+                      cachedDataType="dbDate"
+                      cachedName="Date of Occurrence"
+                      lineageId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Date of Occurrence]" />
+                    <inputColumn
+                      refId="Package\Load_CrimeDataNormalized\Data Conversion.Inputs[Data Conversion Input].Columns[Time of Occurrence]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="Time of Occurrence"
+                      lineageId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Time of Occurrence]" />
+                    <inputColumn
+                      refId="Package\Load_CrimeDataNormalized\Data Conversion.Inputs[Data Conversion Input].Columns[Victim Age]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Victim Age"
+                      lineageId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Victim Age]" />
+                    <inputColumn
+                      refId="Package\Load_CrimeDataNormalized\Data Conversion.Inputs[Data Conversion Input].Columns[Latitude]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Latitude"
+                      lineageId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Latitude]" />
+                    <inputColumn
+                      refId="Package\Load_CrimeDataNormalized\Data Conversion.Inputs[Data Conversion Input].Columns[Longitude]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Longitude"
+                      lineageId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Longitude]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load_CrimeDataNormalized\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Load_CrimeDataNormalized\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load_CrimeDataNormalized\Data Conversion.Outputs[Data Conversion Output].Columns[Date Reported]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      lineageId="Package\Load_CrimeDataNormalized\Data Conversion.Outputs[Data Conversion Output].Columns[Date Reported]"
+                      name="Date Reported"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Date Reported]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load_CrimeDataNormalized\Data Conversion.Outputs[Data Conversion Output].Columns[Date of Occurrence]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      lineageId="Package\Load_CrimeDataNormalized\Data Conversion.Outputs[Data Conversion Output].Columns[Date of Occurrence]"
+                      name="Date of Occurrence"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Date of Occurrence]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load_CrimeDataNormalized\Data Conversion.Outputs[Data Conversion Output].Columns[Time of Occurrence]"
+                      dataType="dbTime"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      lineageId="Package\Load_CrimeDataNormalized\Data Conversion.Outputs[Data Conversion Output].Columns[Time of Occurrence]"
+                      name="Time of Occurrence"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Time of Occurrence]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load_CrimeDataNormalized\Data Conversion.Outputs[Data Conversion Output].Columns[Victim Age]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      lineageId="Package\Load_CrimeDataNormalized\Data Conversion.Outputs[Data Conversion Output].Columns[Victim Age]"
+                      name="Victim Age"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Victim Age]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load_CrimeDataNormalized\Data Conversion.Outputs[Data Conversion Output].Columns[Latitude]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      lineageId="Package\Load_CrimeDataNormalized\Data Conversion.Outputs[Data Conversion Output].Columns[Latitude]"
+                      name="Latitude"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Latitude]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load_CrimeDataNormalized\Data Conversion.Outputs[Data Conversion Output].Columns[Longitude]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      lineageId="Package\Load_CrimeDataNormalized\Data Conversion.Outputs[Data Conversion Output].Columns[Longitude]"
+                      name="Longitude"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Longitude]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load_CrimeDataNormalized\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Load_CrimeDataNormalized\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load_CrimeDataNormalized\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load_CrimeDataNormalized\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load_CrimeDataNormalized\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load_CrimeDataNormalized\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load_CrimeDataNormalized\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load_CrimeDataNormalized\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load_CrimeDataNormalized\Derived Column.Inputs[Derived Column Input].Columns[Digital Record Number]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="12"
+                      cachedName="Digital Record Number"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Digital Record Number]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[TRIM](#{Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Digital Record Number]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">TRIM([Digital Record Number])</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load_CrimeDataNormalized\Derived Column.Inputs[Derived Column Input].Columns[Area Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Area Name"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Area Name]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[TRIM](#{Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Area Name]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">TRIM([Area Name])</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load_CrimeDataNormalized\Derived Column.Inputs[Derived Column Input].Columns[SubArea Number]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="7"
+                      cachedName="SubArea Number"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[SubArea Number]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[TRIM](#{Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[SubArea Number]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">TRIM([SubArea Number])</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load_CrimeDataNormalized\Derived Column.Inputs[Derived Column Input].Columns[CrimeCodeDescription]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="CrimeCodeDescription"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[CrimeCodeDescription]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[TRIM](#{Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[CrimeCodeDescription]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">TRIM(CrimeCodeDescription)</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load_CrimeDataNormalized\Derived Column.Inputs[Derived Column Input].Columns[Victim OriginalCountry]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Victim OriginalCountry"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Victim OriginalCountry]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[TRIM](#{Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Victim OriginalCountry]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">TRIM([Victim OriginalCountry])</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load_CrimeDataNormalized\Derived Column.Inputs[Derived Column Input].Columns[Premise Code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="7"
+                      cachedName="Premise Code"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Premise Code]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[TRIM](#{Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Premise Code]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">TRIM([Premise Code])</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load_CrimeDataNormalized\Derived Column.Inputs[Derived Column Input].Columns[Weapon Description]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Weapon Description"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Weapon Description]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[TRIM](#{Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Weapon Description]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">TRIM([Weapon Description])</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load_CrimeDataNormalized\Derived Column.Inputs[Derived Column Input].Columns[Status Desc]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Status Desc"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Status Desc]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[TRIM](#{Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Status Desc]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">TRIM([Status Desc])</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load_CrimeDataNormalized\Derived Column.Inputs[Derived Column Input].Columns[Victim Gender]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Victim Gender"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Victim Gender]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[TRIM](#{Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Victim Gender]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">TRIM([Victim Gender])</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load_CrimeDataNormalized\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Load_CrimeDataNormalized\Derived Column.Inputs[Derived Column Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load_CrimeDataNormalized\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Load_CrimeDataNormalized\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load_CrimeDataNormalized\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load_CrimeDataNormalized\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load_CrimeDataNormalized\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load_CrimeDataNormalized\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load_CrimeDataNormalized\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load_CrimeDataNormalized\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="{934AAE9B-4B9E-4F05-B1F5-C4D659551800}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[CrimeNormalized]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Digital Record Number]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Digital Record Number]"
+                      length="12"
+                      lineageId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Digital Record Number]"
+                      name="Digital Record Number"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Date Reported]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Date Reported]"
+                      lineageId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Date Reported]"
+                      name="Date Reported"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Date of Occurrence]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Date of Occurrence]"
+                      lineageId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Date of Occurrence]"
+                      name="Date of Occurrence"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Time of Occurrence]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Time of Occurrence]"
+                      length="4"
+                      lineageId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Time of Occurrence]"
+                      name="Time of Occurrence"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Area Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Area Name]"
+                      length="255"
+                      lineageId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Area Name]"
+                      name="Area Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[SubArea Number]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[SubArea Number]"
+                      length="7"
+                      lineageId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[SubArea Number]"
+                      name="SubArea Number"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[CrimeCodeDescription]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CrimeCodeDescription]"
+                      length="255"
+                      lineageId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[CrimeCodeDescription]"
+                      name="CrimeCodeDescription"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Victim Age]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Victim Age]"
+                      length="255"
+                      lineageId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Victim Age]"
+                      name="Victim Age"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Victim Gender]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Victim Gender]"
+                      length="255"
+                      lineageId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Victim Gender]"
+                      name="Victim Gender"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Victim OriginalCountry]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Victim OriginalCountry]"
+                      length="255"
+                      lineageId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Victim OriginalCountry]"
+                      name="Victim OriginalCountry"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Premise Code]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Premise Code]"
+                      length="7"
+                      lineageId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Premise Code]"
+                      name="Premise Code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Weapon Description]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Weapon Description]"
+                      length="255"
+                      lineageId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Weapon Description]"
+                      name="Weapon Description"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Status Desc]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Status Desc]"
+                      length="255"
+                      lineageId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Status Desc]"
+                      name="Status Desc"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Latitude]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Latitude]"
+                      length="255"
+                      lineageId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Latitude]"
+                      name="Latitude"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Longitude]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Longitude]"
+                      length="255"
+                      lineageId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Longitude]"
+                      name="Longitude"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Location]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Location]"
+                      length="255"
+                      lineageId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Location]"
+                      name="Location"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Digital Record Number]"
+                      codePage="1252"
+                      dataType="str"
+                      length="12"
+                      name="Digital Record Number" />
+                    <externalMetadataColumn
+                      refId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Date Reported]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Date Reported" />
+                    <externalMetadataColumn
+                      refId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Date of Occurrence]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Date of Occurrence" />
+                    <externalMetadataColumn
+                      refId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Time of Occurrence]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="Time of Occurrence" />
+                    <externalMetadataColumn
+                      refId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Area Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Area Name" />
+                    <externalMetadataColumn
+                      refId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[SubArea Number]"
+                      codePage="1252"
+                      dataType="str"
+                      length="7"
+                      name="SubArea Number" />
+                    <externalMetadataColumn
+                      refId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CrimeCodeDescription]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="CrimeCodeDescription" />
+                    <externalMetadataColumn
+                      refId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Victim Age]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Victim Age" />
+                    <externalMetadataColumn
+                      refId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Victim Gender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Victim Gender" />
+                    <externalMetadataColumn
+                      refId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Victim OriginalCountry]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Victim OriginalCountry" />
+                    <externalMetadataColumn
+                      refId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Premise Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="7"
+                      name="Premise Code" />
+                    <externalMetadataColumn
+                      refId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Weapon Description]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Weapon Description" />
+                    <externalMetadataColumn
+                      refId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Status Desc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Status Desc" />
+                    <externalMetadataColumn
+                      refId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Latitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Longitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Longitude" />
+                    <externalMetadataColumn
+                      refId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Location]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Location" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load_CrimeDataNormalized\Lookup_Area"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup_Area"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[AreaCodeDescription]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[AreaCodeDescription]) [refTable]
+where [refTable].[AreaName] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="AreaCode" dataType="DT_STR" length="7" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="AreaName" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Area Name]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load_CrimeDataNormalized\Lookup_Area.Connections[OleDbConnection]"
+                  connectionManagerID="{7A58D430-0281-4137-AAA6-4D23177805AC}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Yassin-Ali_MSSQLSERVER2022.CrimeDB]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load_CrimeDataNormalized\Lookup_Area.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load_CrimeDataNormalized\Lookup_Area.Inputs[Lookup Input].Columns[Area Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Area Name"
+                      lineageId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Area Name]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">AreaName</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load_CrimeDataNormalized\Lookup_Area.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Load_CrimeDataNormalized\Lookup_Area.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load_CrimeDataNormalized\Lookup_Area.Outputs[Lookup Match Output].Columns[AreaCode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="7"
+                      lineageId="Package\Load_CrimeDataNormalized\Lookup_Area.Outputs[Lookup Match Output].Columns[AreaCode]"
+                      name="AreaCode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">AreaCode</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load_CrimeDataNormalized\Lookup_Area.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Load_CrimeDataNormalized\Lookup_Area.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load_CrimeDataNormalized\Lookup_Area.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Load_CrimeDataNormalized\Lookup_Area.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load_CrimeDataNormalized\Lookup_Area.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load_CrimeDataNormalized\Lookup_Area.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load_CrimeDataNormalized\Lookup_Area.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load_CrimeDataNormalized\Lookup_Area.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load_CrimeDataNormalized\Lookup_CrimeCode"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup_CrimeCode"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[CrimeCodeDescription]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[CrimeCodeDescription]) [refTable]
+where [refTable].[CrimeCodeDescription] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CrimeCode" dataType="DT_STR" length="7" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="CrimeCodeDescription" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[CrimeCodeDescription]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load_CrimeDataNormalized\Lookup_CrimeCode.Connections[OleDbConnection]"
+                  connectionManagerID="{7A58D430-0281-4137-AAA6-4D23177805AC}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Yassin-Ali_MSSQLSERVER2022.CrimeDB]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load_CrimeDataNormalized\Lookup_CrimeCode.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load_CrimeDataNormalized\Lookup_CrimeCode.Inputs[Lookup Input].Columns[CrimeCodeDescription]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="CrimeCodeDescription"
+                      lineageId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[CrimeCodeDescription]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">CrimeCodeDescription</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load_CrimeDataNormalized\Lookup_CrimeCode.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Load_CrimeDataNormalized\Lookup_CrimeCode.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load_CrimeDataNormalized\Lookup_CrimeCode.Outputs[Lookup Match Output].Columns[CrimeCode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="7"
+                      lineageId="Package\Load_CrimeDataNormalized\Lookup_CrimeCode.Outputs[Lookup Match Output].Columns[CrimeCode]"
+                      name="CrimeCode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">CrimeCode</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load_CrimeDataNormalized\Lookup_CrimeCode.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Load_CrimeDataNormalized\Lookup_CrimeCode.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load_CrimeDataNormalized\Lookup_CrimeCode.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Load_CrimeDataNormalized\Lookup_CrimeCode.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load_CrimeDataNormalized\Lookup_CrimeCode.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load_CrimeDataNormalized\Lookup_CrimeCode.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load_CrimeDataNormalized\Lookup_CrimeCode.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load_CrimeDataNormalized\Lookup_CrimeCode.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load_CrimeDataNormalized\Lookup_Status"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup_Status"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[StatusCodeDescription]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[StatusCodeDescription]) [refTable]
+where [refTable].[StatusDesc] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Status" dataType="DT_STR" length="12" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="StatusDesc" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Status Desc]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load_CrimeDataNormalized\Lookup_Status.Connections[OleDbConnection]"
+                  connectionManagerID="{7A58D430-0281-4137-AAA6-4D23177805AC}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Yassin-Ali_MSSQLSERVER2022.CrimeDB]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load_CrimeDataNormalized\Lookup_Status.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load_CrimeDataNormalized\Lookup_Status.Inputs[Lookup Input].Columns[Status Desc]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Status Desc"
+                      lineageId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Status Desc]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">StatusDesc</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load_CrimeDataNormalized\Lookup_Status.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Load_CrimeDataNormalized\Lookup_Status.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load_CrimeDataNormalized\Lookup_Status.Outputs[Lookup Match Output].Columns[Status]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="12"
+                      lineageId="Package\Load_CrimeDataNormalized\Lookup_Status.Outputs[Lookup Match Output].Columns[Status]"
+                      name="Status"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Status</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load_CrimeDataNormalized\Lookup_Status.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Load_CrimeDataNormalized\Lookup_Status.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load_CrimeDataNormalized\Lookup_Status.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Load_CrimeDataNormalized\Lookup_Status.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load_CrimeDataNormalized\Lookup_Status.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load_CrimeDataNormalized\Lookup_Status.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load_CrimeDataNormalized\Lookup_Status.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load_CrimeDataNormalized\Lookup_Status.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load_CrimeDataNormalized\Lookup_Weapon"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup_Weapon"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[WeaponCodeDescription]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[WeaponCodeDescription]) [refTable]
+where [refTable].[WeaponDescription] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="WeaponUsedCode" dataType="DT_STR" length="7" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="WeaponDescription" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Weapon Description]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load_CrimeDataNormalized\Lookup_Weapon.Connections[OleDbConnection]"
+                  connectionManagerID="{7A58D430-0281-4137-AAA6-4D23177805AC}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Yassin-Ali_MSSQLSERVER2022.CrimeDB]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load_CrimeDataNormalized\Lookup_Weapon.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load_CrimeDataNormalized\Lookup_Weapon.Inputs[Lookup Input].Columns[Weapon Description]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Weapon Description"
+                      lineageId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Weapon Description]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">WeaponDescription</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load_CrimeDataNormalized\Lookup_Weapon.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Load_CrimeDataNormalized\Lookup_Weapon.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load_CrimeDataNormalized\Lookup_Weapon.Outputs[Lookup Match Output].Columns[WeaponUsedCode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="7"
+                      lineageId="Package\Load_CrimeDataNormalized\Lookup_Weapon.Outputs[Lookup Match Output].Columns[WeaponUsedCode]"
+                      name="WeaponUsedCode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">WeaponUsedCode</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load_CrimeDataNormalized\Lookup_Weapon.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Load_CrimeDataNormalized\Lookup_Weapon.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load_CrimeDataNormalized\Lookup_Weapon.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Load_CrimeDataNormalized\Lookup_Weapon.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load_CrimeDataNormalized\Lookup_Weapon.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load_CrimeDataNormalized\Lookup_Weapon.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load_CrimeDataNormalized\Lookup_Weapon.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load_CrimeDataNormalized\Lookup_Weapon.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load_CrimeDataNormalized\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[CrimeDataNormalized]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load_CrimeDataNormalized\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{7A58D430-0281-4137-AAA6-4D23177805AC}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Yassin-Ali_MSSQLSERVER2022.CrimeDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Location]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Location"
+                      externalMetadataColumnId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Location]"
+                      lineageId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Location]" />
+                    <inputColumn
+                      refId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Digital Record Number]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="12"
+                      cachedName="Digital Record Number"
+                      externalMetadataColumnId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DigitalRecordNumber]"
+                      lineageId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Digital Record Number]" />
+                    <inputColumn
+                      refId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SubArea Number]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="7"
+                      cachedName="SubArea Number"
+                      externalMetadataColumnId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SubAreaNumber]"
+                      lineageId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[SubArea Number]" />
+                    <inputColumn
+                      refId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Premise Code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="7"
+                      cachedName="Premise Code"
+                      externalMetadataColumnId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PremiseCode]"
+                      lineageId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Premise Code]" />
+                    <inputColumn
+                      refId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Victim OriginalCountry]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Victim OriginalCountry"
+                      externalMetadataColumnId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VictimOriginalCountry]"
+                      lineageId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Victim OriginalCountry]" />
+                    <inputColumn
+                      refId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AreaCode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="7"
+                      cachedName="AreaCode"
+                      externalMetadataColumnId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AreaCode]"
+                      lineageId="Package\Load_CrimeDataNormalized\Lookup_Area.Outputs[Lookup Match Output].Columns[AreaCode]" />
+                    <inputColumn
+                      refId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CrimeCode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="7"
+                      cachedName="CrimeCode"
+                      externalMetadataColumnId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CrimeCode]"
+                      lineageId="Package\Load_CrimeDataNormalized\Lookup_CrimeCode.Outputs[Lookup Match Output].Columns[CrimeCode]" />
+                    <inputColumn
+                      refId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[WeaponUsedCode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="7"
+                      cachedName="WeaponUsedCode"
+                      externalMetadataColumnId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WeaponUsedCode]"
+                      lineageId="Package\Load_CrimeDataNormalized\Lookup_Weapon.Outputs[Lookup Match Output].Columns[WeaponUsedCode]" />
+                    <inputColumn
+                      refId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Status]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="12"
+                      cachedName="Status"
+                      externalMetadataColumnId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Status]"
+                      lineageId="Package\Load_CrimeDataNormalized\Lookup_Status.Outputs[Lookup Match Output].Columns[Status]" />
+                    <inputColumn
+                      refId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Date Reported]"
+                      cachedDataType="dbDate"
+                      cachedName="Date Reported"
+                      externalMetadataColumnId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateReported]"
+                      lineageId="Package\Load_CrimeDataNormalized\Data Conversion.Outputs[Data Conversion Output].Columns[Date Reported]" />
+                    <inputColumn
+                      refId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Date of Occurrence]"
+                      cachedDataType="dbDate"
+                      cachedName="Date of Occurrence"
+                      externalMetadataColumnId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateOfOccurrence]"
+                      lineageId="Package\Load_CrimeDataNormalized\Data Conversion.Outputs[Data Conversion Output].Columns[Date of Occurrence]" />
+                    <inputColumn
+                      refId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Time of Occurrence]"
+                      cachedDataType="dbTime"
+                      cachedName="Time of Occurrence"
+                      externalMetadataColumnId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TimeOfOccurrence]"
+                      lineageId="Package\Load_CrimeDataNormalized\Data Conversion.Outputs[Data Conversion Output].Columns[Time of Occurrence]" />
+                    <inputColumn
+                      refId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Victim Gender]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Victim Gender"
+                      externalMetadataColumnId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VictimGender]"
+                      lineageId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Victim Gender]" />
+                    <inputColumn
+                      refId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Latitude]"
+                      cachedDataType="r8"
+                      cachedName="Latitude"
+                      externalMetadataColumnId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
+                      lineageId="Package\Load_CrimeDataNormalized\Data Conversion.Outputs[Data Conversion Output].Columns[Latitude]" />
+                    <inputColumn
+                      refId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Longitude]"
+                      cachedDataType="r8"
+                      cachedName="Longitude"
+                      externalMetadataColumnId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Longitude]"
+                      lineageId="Package\Load_CrimeDataNormalized\Data Conversion.Outputs[Data Conversion Output].Columns[Longitude]" />
+                    <inputColumn
+                      refId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Victim Age]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Victim Age"
+                      externalMetadataColumnId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VictimAge]"
+                      lineageId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output].Columns[Victim Age]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DigitalRecordNumber]"
+                      codePage="1252"
+                      dataType="str"
+                      length="12"
+                      name="DigitalRecordNumber" />
+                    <externalMetadataColumn
+                      refId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateReported]"
+                      dataType="dbDate"
+                      name="DateReported" />
+                    <externalMetadataColumn
+                      refId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateOfOccurrence]"
+                      dataType="dbDate"
+                      name="DateOfOccurrence" />
+                    <externalMetadataColumn
+                      refId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TimeOfOccurrence]"
+                      dataType="dbTime2"
+                      name="TimeOfOccurrence"
+                      scale="7" />
+                    <externalMetadataColumn
+                      refId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AreaCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="7"
+                      name="AreaCode" />
+                    <externalMetadataColumn
+                      refId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SubAreaNumber]"
+                      codePage="1252"
+                      dataType="str"
+                      length="7"
+                      name="SubAreaNumber" />
+                    <externalMetadataColumn
+                      refId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CrimeCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="7"
+                      name="CrimeCode" />
+                    <externalMetadataColumn
+                      refId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PremiseCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="7"
+                      name="PremiseCode" />
+                    <externalMetadataColumn
+                      refId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WeaponUsedCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="7"
+                      name="WeaponUsedCode" />
+                    <externalMetadataColumn
+                      refId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Status]"
+                      codePage="1252"
+                      dataType="str"
+                      length="12"
+                      name="Status" />
+                    <externalMetadataColumn
+                      refId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VictimAge]"
+                      dataType="i4"
+                      name="VictimAge" />
+                    <externalMetadataColumn
+                      refId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VictimGender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="VictimGender" />
+                    <externalMetadataColumn
+                      refId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VictimOriginalCountry]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="VictimOriginalCountry" />
+                    <externalMetadataColumn
+                      refId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
+                      dataType="r8"
+                      name="Latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Longitude]"
+                      dataType="r8"
+                      name="Longitude" />
+                    <externalMetadataColumn
+                      refId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Location]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Location" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load_CrimeDataNormalized\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load_CrimeDataNormalized\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load_CrimeDataNormalized\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load_CrimeDataNormalized\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load_CrimeDataNormalized\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Load_CrimeDataNormalized.Paths[Data Conversion Output]"
+              endId="Package\Load_CrimeDataNormalized\Derived Column.Inputs[Derived Column Input]"
+              name="Data Conversion Output"
+              startId="Package\Load_CrimeDataNormalized\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Load_CrimeDataNormalized.Paths[Derived Column Output]"
+              endId="Package\Load_CrimeDataNormalized\Lookup_Area.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\Load_CrimeDataNormalized\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Load_CrimeDataNormalized.Paths[Flat File Source Output]"
+              endId="Package\Load_CrimeDataNormalized\Data Conversion.Inputs[Data Conversion Input]"
+              name="Flat File Source Output"
+              startId="Package\Load_CrimeDataNormalized\Flat File Source.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Load_CrimeDataNormalized.Paths[Lookup Match Output]"
+              endId="Package\Load_CrimeDataNormalized\Lookup_CrimeCode.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Load_CrimeDataNormalized\Lookup_Area.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Load_CrimeDataNormalized.Paths[Lookup Match Output1]"
+              endId="Package\Load_CrimeDataNormalized\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Lookup Match Output"
+              startId="Package\Load_CrimeDataNormalized\Lookup_Status.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Load_CrimeDataNormalized.Paths[Lookup Match Output2]"
+              endId="Package\Load_CrimeDataNormalized\Lookup_Status.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Load_CrimeDataNormalized\Lookup_Weapon.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Load_CrimeDataNormalized.Paths[Lookup Match Output3]"
+              endId="Package\Load_CrimeDataNormalized\Lookup_Weapon.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Load_CrimeDataNormalized\Lookup_CrimeCode.Outputs[Lookup Match Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="209.6,41.6"
+          Id="Package\Load_CrimeDataNormalized"
+          TopLeft="229.999987433355,253.066664906873" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Load_CrimeDataNormalized">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="140,41.6"
+          Id="Package\Load_CrimeDataNormalized\Lookup_Area"
+          TopLeft="122.499993306896,181.399998933276" />
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Load_CrimeDataNormalized\OLE DB Destination"
+          TopLeft="129.166659609312,484.733330157266" />
+        <NodeLayout
+          Size="151.2,41.6"
+          Id="Package\Load_CrimeDataNormalized\Flat File Source"
+          TopLeft="99.999994536241,2.86666684144071" />
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Load_CrimeDataNormalized\Lookup_CrimeCode"
+          TopLeft="113.333327141074,260.266665051514" />
+        <NodeLayout
+          Size="156.8,41.6"
+          Id="Package\Load_CrimeDataNormalized\Lookup_Weapon"
+          TopLeft="124.166659882499,330.466664563351" />
+        <EdgeLayout
+          Id="Package\Load_CrimeDataNormalized.Paths[Lookup Match Output]"
+          TopLeft="195.716660223985,222.999998933276">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37.2666661182377"
+              Start="0,0"
+              End="0,29.7666661182377">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.7666661182377" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,9.07864555911887,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="148,41.6"
+          Id="Package\Load_CrimeDataNormalized\Lookup_Status"
+          TopLeft="134.166659336123,406.733330699669" />
+        <EdgeLayout
+          Id="Package\Load_CrimeDataNormalized.Paths[Lookup Match Output1]"
+          TopLeft="211.466659472717,448.333330699669">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36.3999994575976"
+              Start="0,0"
+              End="0,28.8999994575976">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.8999994575976" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,8.64531222879879,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load_CrimeDataNormalized.Paths[Lookup Match Output2]"
+          TopLeft="205.366659609311,372.066664563351">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34.6666661363178"
+              Start="0,0"
+              End="0,27.1666661363178">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.1666661363178" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,7.77864556815891,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load_CrimeDataNormalized.Paths[Lookup Match Output3]"
+          TopLeft="200.749993511786,301.866665051513">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,28.5999995118375"
+              Start="0,0"
+              End="0,21.0999995118375">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.0999995118375" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,4.74531225591875,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\Load_CrimeDataNormalized\Derived Column"
+          TopLeft="103.333327687449,118.733332507677" />
+        <EdgeLayout
+          Id="Package\Load_CrimeDataNormalized.Paths[Derived Column Output]"
+          TopLeft="103.333327687449,139.533332507677">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="19.1666656194465,62.6666664255994"
+              Start="0,0"
+              End="11.6666656194465,62.6666664255994">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-18.5,0"
+                    Point2="-22.5,0"
+                    Point3="-22.5,4" />
+                  <mssgle:LineSegment
+                    End="-22.5,58.6666664255994" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-22.5,58.6666664255994"
+                    Point2="-22.5,62.6666664255994"
+                    Point3="-18.5,62.6666664255994" />
+                  <mssgle:LineSegment
+                    End="11.6666656194465,62.6666664255994" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="156,41.6"
+          Id="Package\Load_CrimeDataNormalized\Data Conversion"
+          TopLeft="91.666661658221,54.5999996203184" />
+        <EdgeLayout
+          Id="Package\Load_CrimeDataNormalized.Paths[Flat File Source Output]"
+          TopLeft="251.199994536241,23.6666668414407">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-3.53333287801993,51.7333327788777"
+              Start="0,0"
+              End="3.96666712198007,51.7333327788777">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="18.5,0"
+                    Point2="22.5,0"
+                    Point3="22.5,4" />
+                  <mssgle:LineSegment
+                    End="22.5,47.7333327788777" />
+                  <mssgle:CubicBezierSegment
+                    Point1="22.5,47.7333327788777"
+                    Point2="22.5,51.7333327788777"
+                    Point3="18.5,51.7333327788777" />
+                  <mssgle:LineSegment
+                    End="3.96666712198007,51.7333327788777" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load_CrimeDataNormalized.Paths[Data Conversion Output]"
+          TopLeft="169.666661658221,96.1999996203184">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="10.0666660292282,22.5333328873581"
+              Start="0,0"
+              End="10.0666660292282,15.0333328873581">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,7.26666644367905" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,7.26666644367905"
+                    Point2="0,11.266666443679"
+                    Point3="4,11.266666443679" />
+                  <mssgle:LineSegment
+                    End="6.0666660292282,11.266666443679" />
+                  <mssgle:CubicBezierSegment
+                    Point1="6.0666660292282,11.266666443679"
+                    Point2="10.0666660292282,11.266666443679"
+                    Point3="10.0666660292282,15.266666443679" />
+                  <mssgle:LineSegment
+                    End="10.0666660292282,15.0333328873581" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load_CrimeDataNormalized\Lookup_Area">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">true</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[AreaCodeDescription]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load_CrimeDataNormalized\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load_CrimeDataNormalized\Lookup_CrimeCode">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">true</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load_CrimeDataNormalized\Lookup_Weapon">
+    <Properties>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q2:string">[dbo].[WeaponCodeDescription]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q3:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q4:boolean">true</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
