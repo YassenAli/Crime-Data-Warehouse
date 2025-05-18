@@ -106,9 +106,3 @@ ORDER BY Incidents DESC;
 ![dashboard](screens/PowerBI.png)
 
 See **Project Details.pdf** for annotated screenshots.
-
----
-
-## 📄 Full Report (scroll)
-
-<iframe src="Project Details.pdf" width="100%" height="600px"></iframe>
