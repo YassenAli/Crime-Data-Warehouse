@@ -1,0 +1,2330 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/17/2025 11:27:35 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="YASSIN-ALI"
+  DTS:CreatorName="YASSIN-ALI\Yassin"
+  DTS:DTSID="{8995F03B-905D-4F25-87C3-3B81CE9F9971}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Load_All _Tables_from_src"
+  DTS:PackageType="5"
+  DTS:VersionBuild="56"
+  DTS:VersionGUID="{400ABDEF-46E1-4EA3-B0C6-641432BBE61B}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ff_crimecodedesc]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{19DF8FBD-B524-4131-AC79-77D8FAA9C30E}"
+      DTS:ObjectName="ff_crimecodedesc">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="Y:\FCAI\Level 3\Second Semester\Data Warehouse\Assignments\Project\archive\CSVNormalized\CSVNormalized\CrimeCodeDescriptionAnsi.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="7"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Crime Code"
+              DTS:DTSID="{829F9F4A-CC48-4B26-9A32-1891E44ADF53}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CrimeCodeDescription"
+              DTS:DTSID="{8ACB44B5-6857-416D-A75F-2224581FF060}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ff_finalwc]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{1034418E-66DF-4044-82A4-1FE6D40EE079}"
+      DTS:ObjectName="ff_finalwc">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="Y:\FCAI\Level 3\Second Semester\Data Warehouse\Assignments\Project\archive\FinalWC.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="12"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Digital Record Number"
+              DTS:DTSID="{C765EE60-815B-4A77-A895-45500276750C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date Reported"
+              DTS:DTSID="{A68181C4-3C91-47A4-AA50-0102BCCB0F72}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date of Occurrence"
+              DTS:DTSID="{55DA638B-70EE-44F8-9882-3723FE472E60}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Time of Occurrence"
+              DTS:DTSID="{D94F2C3A-C265-43A6-93E6-C46FBA429E6B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="7"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AreaCode"
+              DTS:DTSID="{3EF4C104-31B7-4989-B78F-82C52172E886}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Area Name"
+              DTS:DTSID="{0EAD9817-2294-4423-831B-1EDDCF858B88}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="7"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SubArea Number"
+              DTS:DTSID="{2747A992-58B9-43DA-9F44-FAEECFEE90A8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="7"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Crime Code"
+              DTS:DTSID="{BC888659-29E4-451C-B559-1E0D8C784625}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CrimeCodeDescription"
+              DTS:DTSID="{CF4FA222-FEB9-41DC-81D9-EBE544A72777}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ModusOperandiCodes"
+              DTS:DTSID="{2E0BC0F8-8FAA-4364-BE54-E9228844C52D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Victim Age"
+              DTS:DTSID="{BDE4041A-56DB-4ECB-9BDA-C951DF16009B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Victim Gender"
+              DTS:DTSID="{6DA82A22-5F02-4699-8706-36B0E45FB91C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Victim OriginalCountry"
+              DTS:DTSID="{59C5D768-776E-465A-A981-02D31B988577}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Premise Code"
+              DTS:DTSID="{326BB553-349A-46BC-93AA-5FD1CBA2B77C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PremiseDescription"
+              DTS:DTSID="{7BC344C3-F700-4796-B62E-B46BE23C5786}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Weapon Used Code"
+              DTS:DTSID="{D2DEA2CC-F8ED-43DA-9038-092052AFB54B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Weapon Description"
+              DTS:DTSID="{DAC6142B-CCBF-4C35-83B3-9A54A7D7D393}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Status"
+              DTS:DTSID="{F9AD5145-75EC-4AA7-A124-EED0D188BBF4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Status Desc"
+              DTS:DTSID="{623DEEBE-42D6-410D-A87F-06D19FCA6ABF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Latitude"
+              DTS:DTSID="{11CACAC1-8CBE-4DA3-906E-778BFC91D60D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Longitude"
+              DTS:DTSID="{57AF8CF7-C037-4E5D-9813-390F3C949347}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Location"
+              DTS:DTSID="{A67F72C7-02F5-485E-B7E2-26787BAA098B}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ff_Status]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{CF46E15D-D38F-4EC9-AAFC-E355BAB207AD}"
+      DTS:ObjectName="ff_Status">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="Y:\FCAI\Level 3\Second Semester\Data Warehouse\Assignments\Project\archive\CSVNormalized\CSVNormalized\StatucCodeDescription.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="12"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Status"
+              DTS:DTSID="{172681E2-08FE-4003-912B-FA350C637E26}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Status Desc"
+              DTS:DTSID="{7E64C032-79E6-4396-AF7C-BACBA1E6797A}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{3BC20810-0A43-4326-89D0-3D053CE087E4}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{7A58D430-0281-4137-AAA6-4D23177805AC}"
+          SQLTask:SqlStatementSource="CREATE TABLE dbo.CrimeFinalWC&#xA;(&#xA;  [Digital Record Number]      VARCHAR(12)    NULL,&#xA;  [Date Reported]              VARCHAR(10)    NULL,&#xA;  [Date of Occurrence]         VARCHAR(10)    NULL,&#xA;  [Time of Occurrence]         VARCHAR(4)     NULL,&#xA;  [AreaCode]                   VARCHAR(7)     NULL,&#xA;  [Area Name]                  VARCHAR(255)   NULL,&#xA;  [SubArea Number]             VARCHAR(7)     NULL,&#xA;  [Crime Code]                 VARCHAR(7)     NULL,&#xA;  [CrimeCodeDescription]       VARCHAR(255)   NULL,&#xA;  [ModusOperandiCodes]         VARCHAR(255)   NULL,&#xA;  [Victim Age]                 VARCHAR(255)    NULL,&#xA;  [Victim Gender]              VARCHAR(255)     NULL,&#xA;  [Victim OriginalCountry]     VARCHAR(255)   NULL,&#xA;  [Premise Code]               VARCHAR(255)     NULL,&#xA;  [PremiseDescription]         VARCHAR(255)   NULL,&#xA;  [Weapon Used Code]           VARCHAR(255)     NULL,&#xA;  [Weapon Description]         VARCHAR(255)   NULL,&#xA;  [Status]                     VARCHAR(255)     NULL,&#xA;  [Status Desc]                VARCHAR(255)   NULL,&#xA;  [Latitude]                   VARCHAR(255)    NULL,&#xA;  [Longitude]                  VARCHAR(255)    NULL,&#xA;  [Location]                   VARCHAR(255)   NULL&#xA;);&#xA;GO&#xA;&#xA;BULK INSERT dbo.CrimeFinalWC&#xA;FROM 'Y:\FCAI\Level 3\Second Semester\Data Warehouse\Assignments\Project\archive\Crime_Data_WC_Final_denormalized.csv'&#xA;WITH&#xA;(&#xA;  FIRSTROW         = 2,          -- skip header&#xA;  FIELDTERMINATOR  = ',',&#xA;  ROWTERMINATOR    = '\n',&#xA;  CODEPAGE         = '65001',     -- or '1252' if ANSI&#xA;  TABLOCK&#xA;);&#xA;GO&#xA;&#xA;INSERT INTO dbo.CrimeCodeDescription (CrimeCode, CrimeCodeDescription)&#xA;SELECT DISTINCT&#xA;    t.[Crime Code],&#xA;    t.CrimeCodeDescription&#xA;FROM dbo.CrimeFinalWC AS t&#xA;LEFT JOIN dbo.CrimeCodeDescription AS d&#xA;    ON d.CrimeCode = t.[Crime Code]&#xA;WHERE t.[Crime Code]     IS NOT NULL&#xA;  AND t.[Crime Code]     &lt;&gt; ''&#xA;  AND d.CrimeCode        IS NULL;&#xA;  -------------------&#xA;&#xA;BEGIN TRAN;&#xA;&#xA;-- 1) Trim whitespace everywhere&#xA;UPDATE dbo.CrimeFinalWC&#xA;SET &#xA;    [Premise Code]       = LTRIM(RTRIM([Premise Code])),&#xA;    [Weapon Used Code]   = LTRIM(RTRIM([Weapon Used Code])),&#xA;    [Status]             = UPPER(LTRIM(RTRIM([Status])));&#xA;&#xA;-- 2) Extract only leading digits for Premise Code&#xA;--    e.g. '0100 03' → '0100'; non-numeric → NULL&#xA;UPDATE dbo.CrimeFinalWC&#xA;SET [Premise Code] = CASE &#xA;  WHEN PATINDEX('[0-9]%', [Premise Code]) = 1&#xA;    THEN LEFT([Premise Code],&#xA;              NULLIF(CHARINDEX(' ', [Premise Code] + ' ')-1, -1)&#xA;             )&#xA;  ELSE NULL&#xA;END;&#xA;&#xA;-- 3) Extract only leading digits for Weapon Used Code&#xA;--    e.g. '101ABC' → '101'; non-digit prefix → NULL&#xA;UPDATE dbo.CrimeFinalWC&#xA;SET [Weapon Used Code] = CASE &#xA;  WHEN PATINDEX('[0-9]%', [Weapon Used Code]) = 1&#xA;    THEN LEFT([Weapon Used Code],&#xA;              ISNULL(NULLIF(CHARINDEX(' ', [Weapon Used Code] + ' ')-1, -1),&#xA;                     LEN([Weapon Used Code])&#xA;              )&#xA;             )&#xA;  ELSE NULL&#xA;END;&#xA;&#xA;-- 4) Drop any non-two-letter status codes&#xA;UPDATE dbo.CrimeFinalWC&#xA;SET [Status] = NULL&#xA;WHERE NOT ([Status] LIKE '[A-Z][A-Z]');&#xA;&#xA;&#xA;-- 5) Remove rows that still have no valid keys&#xA;DELETE t&#xA;FROM dbo.CrimeFinalWC AS t&#xA;LEFT JOIN dbo.AreaCodeDescription AS a ON a.AreaCode = t.AreaCode&#xA;LEFT JOIN dbo.CrimeCodeDescription AS c ON c.CrimeCode = t.[Crime Code]&#xA;LEFT JOIN dbo.PremiseCodeDescription AS p ON p.PremiseCode = t.[Premise Code]&#xA;LEFT JOIN dbo.WeaponCodeDescription AS w ON w.WeaponUsedCode = t.[Weapon Used Code]&#xA;LEFT JOIN dbo.StatusCodeDescription AS s ON s.Status = t.[Status]&#xA;WHERE&#xA;   a.AreaCode        IS NULL  -- area codes should already be complete&#xA;   OR c.CrimeCode     IS NULL&#xA;   OR p.PremiseCode   IS NULL&#xA;   OR w.WeaponUsedCode IS NULL&#xA;   OR s.Status        IS NULL;&#xA;&#xA;-- 6) Quick validation: how many rows remain?&#xA;SELECT COUNT(*) AS CleanRows&#xA;FROM dbo.CrimeFinalWC;&#xA;&#xA;COMMIT;&#xA;GO&#xA;&#xA;&#xA;INSERT INTO dbo.WeaponCodeDescription (WeaponUsedCode, WeaponDescription)&#xA;SELECT DISTINCT&#xA;    CleanCode,&#xA;    LTRIM(RTRIM([Weapon Description])) AS CleanDesc&#xA;FROM dbo.CrimeFinalWC&#xA;CROSS APPLY&#xA;(&#xA;  SELECT LTRIM(RTRIM([Weapon Used Code])) AS CleanCode&#xA;) AS x&#xA;WHERE&#xA;  CleanCode LIKE '[0-9]%'        -- must start with a digit&#xA;  AND LEN(CleanCode) &lt;= 7        -- fit your VARCHAR(7)&#xA;  AND NOT EXISTS (&#xA;    SELECT 1&#xA;    FROM dbo.WeaponCodeDescription d&#xA;    WHERE d.WeaponUsedCode = x.CleanCode&#xA;  );&#xA;&#xA;INSERT INTO dbo.PremiseCodeDescription (PremiseCode, PremiseDescription)&#xA;SELECT DISTINCT&#xA;    CleanCode,&#xA;    CleanDesc&#xA;FROM&#xA;(&#xA;  SELECT&#xA;    -- strip spaces &amp; take everything up to first blank&#xA;    LEFT(&#xA;      LTRIM(RTRIM([Premise Code])),&#xA;      CHARINDEX(' ', LTRIM(RTRIM([Premise Code])) + ' ') - 1&#xA;    ) AS CleanCode,&#xA;    LTRIM(RTRIM(PremiseDescription)) AS CleanDesc&#xA;  FROM dbo.CrimeFinalWC&#xA;) AS src&#xA;WHERE&#xA;  CleanCode &lt;&gt; ''&#xA;  AND NOT EXISTS (&#xA;    SELECT 1&#xA;    FROM dbo.PremiseCodeDescription d&#xA;    WHERE d.PremiseCode = src.CleanCode&#xA;  );&#xA; SELECT DISTINCT [Status]&#xA;FROM dbo.CrimeFinalWC&#xA;EXCEPT&#xA;SELECT Status&#xA;FROM dbo.StatusCodeDescription;&#xA;&#xA;INSERT INTO dbo.StatusCodeDescription (Status, StatusDesc)&#xA;SELECT DISTINCT&#xA;    LTRIM(RTRIM(t.[Status]))   AS CleanStatus,&#xA;    t.[Status Desc]&#xA;FROM dbo.CrimeFinalWC AS t&#xA;LEFT JOIN dbo.StatusCodeDescription AS d&#xA;  ON d.Status = LTRIM(RTRIM(t.[Status]))&#xA;WHERE&#xA;  -- Must be exactly two uppercase letters (e.g. 'AA', 'IC', 'JA')&#xA;  LTRIM(RTRIM(t.[Status])) LIKE '[A-Z][A-Z]'&#xA;  AND d.Status IS NULL;&#xA;&#xA;&#xA;&#xA;&#xA;BEGIN TRAN;&#xA;&#xA;INSERT INTO dbo.CrimeDataNormalized( DigitalRecordNumber, DateReported, DateOfOccurrence, TimeOfOccurrence, AreaCode, SubAreaNumber, CrimeCode, PremiseCode, WeaponUsedCode, [Status]&#xA;, VictimAge,    VictimGender, VictimOriginalCountry, Latitude,     Longitude,    [Location])&#xA;SELECT&#xA;  t.[Digital Record Number],&#xA;&#xA;  -- convert m/d/yyyy strings to DATE&#xA;  TRY_CONVERT(date, NULLIF(t.[Date Reported], ''), 101),&#xA;  TRY_CONVERT(date, NULLIF(t.[Date of Occurrence], ''), 101),&#xA;&#xA;  -- inject colon into hhmm and convert to TIME&#xA;  TRY_CONVERT(time, STUFF(NULLIF(t.[Time of Occurrence], ''), 3, 0, ':'), 108),&#xA;&#xA;  -- direct code from file (already normalized)&#xA;  NULLIF(t.AreaCode, ''),&#xA;  NULLIF(t.[SubArea Number], ''),&#xA;  NULLIF(t.[Crime Code], ''),&#xA;  NULLIF(t.[Premise Code], ''),&#xA;  NULLIF(t.[Weapon Used Code], ''),&#xA;  NULLIF(t.[Status], ''),&#xA;&#xA;  -- numeric casts&#xA;  TRY_CAST(NULLIF(t.[Victim Age], '') AS INT),&#xA;&#xA;  NULLIF(t.[Victim Gender], ''),&#xA;  NULLIF(t.[Victim OriginalCountry], ''),&#xA;&#xA;  TRY_CAST(NULLIF(t.Latitude, '') AS FLOAT),&#xA;  TRY_CAST(NULLIF(t.Longitude, '') AS FLOAT),&#xA;&#xA;  NULLIF(t.Location, '')&#xA;&#xA;FROM dbo.CrimeFinalWC AS t&#xA;&#xA;  /* Join‐back for descriptions if you need to enforce valid keys.&#xA;     If you trust the file’s codes, you can skip these joins. */&#xA;  INNER JOIN dbo.AreaCodeDescription       AS a ON a.AreaCode            = t.AreaCode&#xA;  INNER JOIN dbo.CrimeCodeDescription      AS c ON c.CrimeCode           = t.[Crime Code]&#xA;  INNER JOIN dbo.PremiseCodeDescription    AS p ON p.PremiseCode         = t.[Premise Code]&#xA;  INNER JOIN dbo.WeaponCodeDescription     AS w ON w.WeaponUsedCode      = t.[Weapon Used Code]&#xA;  INNER JOIN dbo.StatusCodeDescription     AS s ON s.Status              = t.[Status]&#xA;WHERE&#xA;  a.AreaCode            IS NOT NULL&#xA;  AND c.CrimeCode        IS NOT NULL&#xA;  AND p.PremiseCode      IS NOT NULL&#xA;  AND w.WeaponUsedCode   IS NOT NULL&#xA;  AND s.Status           IS NOT NULL;&#xA;;&#xA;&#xA;IF @@ERROR = 0&#xA;  COMMIT;&#xA;ELSE&#xA;  ROLLBACK;&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Load_Area"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{b332f1a3-a9ac-4cad-9c6c-99e2a323923b}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load_Area"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Load_Area\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load_Area\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="{9672461A-F556-4D4C-A697-D380194B7B79}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ff_Area]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Load_Area\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load_Area\Flat File Source.Outputs[Flat File Source Output].Columns[AreaCode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load_Area\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AreaCode]"
+                      length="7"
+                      lineageId="Package\Load_Area\Flat File Source.Outputs[Flat File Source Output].Columns[AreaCode]"
+                      name="AreaCode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load_Area\Flat File Source.Outputs[Flat File Source Output].Columns[Area Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load_Area\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Area Name]"
+                      length="255"
+                      lineageId="Package\Load_Area\Flat File Source.Outputs[Flat File Source Output].Columns[Area Name]"
+                      name="Area Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load_Area\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AreaCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="7"
+                      name="AreaCode" />
+                    <externalMetadataColumn
+                      refId="Package\Load_Area\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Area Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Area Name" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Load_Area\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load_Area\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Load_Area\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Load_Area\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load_Area\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load_Area\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load_Area\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load_Area\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[AreaCodeDescription]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load_Area\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{7A58D430-0281-4137-AAA6-4D23177805AC}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Yassin-Ali_MSSQLSERVER2022.CrimeDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load_Area\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load_Area\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AreaCode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="7"
+                      cachedName="AreaCode"
+                      externalMetadataColumnId="Package\Load_Area\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AreaCode]"
+                      lineageId="Package\Load_Area\Flat File Source.Outputs[Flat File Source Output].Columns[AreaCode]" />
+                    <inputColumn
+                      refId="Package\Load_Area\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Area Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Area Name"
+                      externalMetadataColumnId="Package\Load_Area\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AreaName]"
+                      lineageId="Package\Load_Area\Flat File Source.Outputs[Flat File Source Output].Columns[Area Name]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load_Area\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AreaCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="7"
+                      name="AreaCode" />
+                    <externalMetadataColumn
+                      refId="Package\Load_Area\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AreaName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="AreaName" />
+                    <externalMetadataColumn
+                      refId="Package\Load_Area\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LastModified]"
+                      dataType="dbTimeStamp"
+                      name="LastModified" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load_Area\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Load_Area\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load_Area\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load_Area\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load_Area\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load_Area\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Load_Area.Paths[Flat File Source Output]"
+              endId="Package\Load_Area\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Load_Area\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Load_CrimeCodeDesc"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{6573fd54-7df9-41a3-bcd2-3ef007d73369}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load_CrimeCodeDesc"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Load_CrimeCodeDesc\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load_CrimeCodeDesc\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ff_crimecodedesc]"
+                  connectionManagerRefId="Package.ConnectionManagers[ff_crimecodedesc]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Load_CrimeCodeDesc\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load_CrimeCodeDesc\Flat File Source.Outputs[Flat File Source Output].Columns[Crime Code]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load_CrimeCodeDesc\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Crime Code]"
+                      length="7"
+                      lineageId="Package\Load_CrimeCodeDesc\Flat File Source.Outputs[Flat File Source Output].Columns[Crime Code]"
+                      name="Crime Code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load_CrimeCodeDesc\Flat File Source.Outputs[Flat File Source Output].Columns[CrimeCodeDescription]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load_CrimeCodeDesc\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CrimeCodeDescription]"
+                      length="255"
+                      lineageId="Package\Load_CrimeCodeDesc\Flat File Source.Outputs[Flat File Source Output].Columns[CrimeCodeDescription]"
+                      name="CrimeCodeDescription"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load_CrimeCodeDesc\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Crime Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="7"
+                      name="Crime Code" />
+                    <externalMetadataColumn
+                      refId="Package\Load_CrimeCodeDesc\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CrimeCodeDescription]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="CrimeCodeDescription" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Load_CrimeCodeDesc\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load_CrimeCodeDesc\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Load_CrimeCodeDesc\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Load_CrimeCodeDesc\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load_CrimeCodeDesc\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load_CrimeCodeDesc\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load_CrimeCodeDesc\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load_CrimeCodeDesc\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[CrimeCodeDescription]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load_CrimeCodeDesc\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{7A58D430-0281-4137-AAA6-4D23177805AC}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Yassin-Ali_MSSQLSERVER2022.CrimeDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load_CrimeCodeDesc\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load_CrimeCodeDesc\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CrimeCodeDescription]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="CrimeCodeDescription"
+                      externalMetadataColumnId="Package\Load_CrimeCodeDesc\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CrimeCodeDescription]"
+                      lineageId="Package\Load_CrimeCodeDesc\Flat File Source.Outputs[Flat File Source Output].Columns[CrimeCodeDescription]" />
+                    <inputColumn
+                      refId="Package\Load_CrimeCodeDesc\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Crime Code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="7"
+                      cachedName="Crime Code"
+                      externalMetadataColumnId="Package\Load_CrimeCodeDesc\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CrimeCode]"
+                      lineageId="Package\Load_CrimeCodeDesc\Flat File Source.Outputs[Flat File Source Output].Columns[Crime Code]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load_CrimeCodeDesc\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LastModified]"
+                      dataType="dbTimeStamp"
+                      name="LastModified" />
+                    <externalMetadataColumn
+                      refId="Package\Load_CrimeCodeDesc\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CrimeCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="7"
+                      name="CrimeCode" />
+                    <externalMetadataColumn
+                      refId="Package\Load_CrimeCodeDesc\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CrimeCodeDescription]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="CrimeCodeDescription" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load_CrimeCodeDesc\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Load_CrimeCodeDesc\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load_CrimeCodeDesc\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load_CrimeCodeDesc\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load_CrimeCodeDesc\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load_CrimeCodeDesc\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Load_CrimeCodeDesc.Paths[Flat File Source Output]"
+              endId="Package\Load_CrimeCodeDesc\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Load_CrimeCodeDesc\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Load_CrimeData"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{67e7e69e-c165-4f97-98fb-df76ffcdc367}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load_CrimeData"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Load_PremiseCode"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{317d1db5-3c16-4b5a-84c1-6f0c97a27bc4}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load_PremiseCode"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Load_PremiseCode\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load_PremiseCode\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="{3A2837B3-D149-4025-99FD-AA605342DB79}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ffStg_PremiseCode]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Load_PremiseCode\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load_PremiseCode\Flat File Source.Outputs[Flat File Source Output].Columns[﻿Premise Code]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load_PremiseCode\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[﻿Premise Code]"
+                      length="7"
+                      lineageId="Package\Load_PremiseCode\Flat File Source.Outputs[Flat File Source Output].Columns[﻿Premise Code]"
+                      name="﻿Premise Code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load_PremiseCode\Flat File Source.Outputs[Flat File Source Output].Columns[PremiseDescription]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load_PremiseCode\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PremiseDescription]"
+                      length="255"
+                      lineageId="Package\Load_PremiseCode\Flat File Source.Outputs[Flat File Source Output].Columns[PremiseDescription]"
+                      name="PremiseDescription"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load_PremiseCode\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[﻿Premise Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="7"
+                      name="﻿Premise Code" />
+                    <externalMetadataColumn
+                      refId="Package\Load_PremiseCode\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PremiseDescription]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="PremiseDescription" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Load_PremiseCode\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load_PremiseCode\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Load_PremiseCode\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Load_PremiseCode\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load_PremiseCode\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load_PremiseCode\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load_PremiseCode\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load_PremiseCode\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[PremiseCodeDescription]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load_PremiseCode\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{7A58D430-0281-4137-AAA6-4D23177805AC}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Yassin-Ali_MSSQLSERVER2022.CrimeDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load_PremiseCode\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load_PremiseCode\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[﻿Premise Code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="7"
+                      cachedName="﻿Premise Code"
+                      externalMetadataColumnId="Package\Load_PremiseCode\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PremiseCode]"
+                      lineageId="Package\Load_PremiseCode\Flat File Source.Outputs[Flat File Source Output].Columns[﻿Premise Code]" />
+                    <inputColumn
+                      refId="Package\Load_PremiseCode\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PremiseDescription]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="PremiseDescription"
+                      externalMetadataColumnId="Package\Load_PremiseCode\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PremiseDescription]"
+                      lineageId="Package\Load_PremiseCode\Flat File Source.Outputs[Flat File Source Output].Columns[PremiseDescription]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load_PremiseCode\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PremiseCode]"
+                      codePage="1252"
+                      dataType="str"
+                      description="code"
+                      length="7"
+                      name="PremiseCode" />
+                    <externalMetadataColumn
+                      refId="Package\Load_PremiseCode\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PremiseDescription]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="PremiseDescription" />
+                    <externalMetadataColumn
+                      refId="Package\Load_PremiseCode\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LastModified]"
+                      dataType="dbTimeStamp"
+                      name="LastModified" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load_PremiseCode\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Load_PremiseCode\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load_PremiseCode\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load_PremiseCode\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load_PremiseCode\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load_PremiseCode\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Load_PremiseCode.Paths[Flat File Source Output]"
+              endId="Package\Load_PremiseCode\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Load_PremiseCode\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Load_Status"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{a32cc335-da6c-47ad-837c-419418b5ab06}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load_Status"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Load_Status\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load_Status\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ff_Status]"
+                  connectionManagerRefId="Package.ConnectionManagers[ff_Status]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Load_Status\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load_Status\Flat File Source.Outputs[Flat File Source Output].Columns[Status]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load_Status\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Status]"
+                      length="12"
+                      lineageId="Package\Load_Status\Flat File Source.Outputs[Flat File Source Output].Columns[Status]"
+                      name="Status"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load_Status\Flat File Source.Outputs[Flat File Source Output].Columns[Status Desc]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load_Status\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Status Desc]"
+                      length="255"
+                      lineageId="Package\Load_Status\Flat File Source.Outputs[Flat File Source Output].Columns[Status Desc]"
+                      name="Status Desc"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load_Status\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Status]"
+                      codePage="1252"
+                      dataType="str"
+                      length="12"
+                      name="Status" />
+                    <externalMetadataColumn
+                      refId="Package\Load_Status\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Status Desc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Status Desc" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Load_Status\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load_Status\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Load_Status\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Load_Status\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load_Status\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load_Status\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load_Status\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load_Status\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[StatusCodeDescription]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load_Status\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{7A58D430-0281-4137-AAA6-4D23177805AC}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Yassin-Ali_MSSQLSERVER2022.CrimeDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load_Status\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load_Status\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Status]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="12"
+                      cachedName="Status"
+                      externalMetadataColumnId="Package\Load_Status\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Status]"
+                      lineageId="Package\Load_Status\Flat File Source.Outputs[Flat File Source Output].Columns[Status]" />
+                    <inputColumn
+                      refId="Package\Load_Status\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Status Desc]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Status Desc"
+                      externalMetadataColumnId="Package\Load_Status\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StatusDesc]"
+                      lineageId="Package\Load_Status\Flat File Source.Outputs[Flat File Source Output].Columns[Status Desc]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load_Status\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Status]"
+                      codePage="1252"
+                      dataType="str"
+                      length="12"
+                      name="Status" />
+                    <externalMetadataColumn
+                      refId="Package\Load_Status\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StatusDesc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="StatusDesc" />
+                    <externalMetadataColumn
+                      refId="Package\Load_Status\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LastModified]"
+                      dataType="dbTimeStamp"
+                      name="LastModified" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load_Status\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Load_Status\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load_Status\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load_Status\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load_Status\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load_Status\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Load_Status.Paths[Flat File Source Output]"
+              endId="Package\Load_Status\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Load_Status\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Load_Weapon"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{6428743c-ade5-42ab-883f-32a15189828e}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load_Weapon"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Load_Weapon\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load_Weapon\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="{885AB4D6-FD3B-4449-9431-75BE5A1876F1}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ff_WeaponLoad]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Load_Weapon\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load_Weapon\Flat File Source.Outputs[Flat File Source Output].Columns[Weapon Used Code]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load_Weapon\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Weapon Used Code]"
+                      length="7"
+                      lineageId="Package\Load_Weapon\Flat File Source.Outputs[Flat File Source Output].Columns[Weapon Used Code]"
+                      name="Weapon Used Code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load_Weapon\Flat File Source.Outputs[Flat File Source Output].Columns[Weapon Description]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load_Weapon\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Weapon Description]"
+                      length="255"
+                      lineageId="Package\Load_Weapon\Flat File Source.Outputs[Flat File Source Output].Columns[Weapon Description]"
+                      name="Weapon Description"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load_Weapon\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Weapon Used Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="7"
+                      name="Weapon Used Code" />
+                    <externalMetadataColumn
+                      refId="Package\Load_Weapon\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Weapon Description]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Weapon Description" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Load_Weapon\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load_Weapon\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Load_Weapon\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Load_Weapon\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load_Weapon\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load_Weapon\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load_Weapon\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load_Weapon\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[WeaponCodeDescription]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load_Weapon\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{7A58D430-0281-4137-AAA6-4D23177805AC}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Yassin-Ali_MSSQLSERVER2022.CrimeDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load_Weapon\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load_Weapon\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Weapon Used Code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="7"
+                      cachedName="Weapon Used Code"
+                      externalMetadataColumnId="Package\Load_Weapon\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WeaponUsedCode]"
+                      lineageId="Package\Load_Weapon\Flat File Source.Outputs[Flat File Source Output].Columns[Weapon Used Code]" />
+                    <inputColumn
+                      refId="Package\Load_Weapon\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Weapon Description]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Weapon Description"
+                      externalMetadataColumnId="Package\Load_Weapon\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WeaponDescription]"
+                      lineageId="Package\Load_Weapon\Flat File Source.Outputs[Flat File Source Output].Columns[Weapon Description]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load_Weapon\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WeaponUsedCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="7"
+                      name="WeaponUsedCode" />
+                    <externalMetadataColumn
+                      refId="Package\Load_Weapon\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WeaponDescription]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="WeaponDescription" />
+                    <externalMetadataColumn
+                      refId="Package\Load_Weapon\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LastModified]"
+                      dataType="dbTimeStamp"
+                      name="LastModified" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load_Weapon\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Load_Weapon\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load_Weapon\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load_Weapon\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load_Weapon\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load_Weapon\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Load_Weapon.Paths[Flat File Source Output]"
+              endId="Package\Load_Weapon\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Load_Weapon\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{4D7074BD-B9B3-4AC1-B020-2E2EAA41FD77}"
+      DTS:From="Package\Load_Area"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Load_PremiseCode" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{FDECEE7B-7FC8-4204-BC1A-67535F00CFD2}"
+      DTS:From="Package\Load_PremiseCode"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Load_CrimeCodeDesc" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{17871689-42CB-482D-A75C-78DF315EA1FD}"
+      DTS:From="Package\Load_Status"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Load_Weapon" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{423FAD2C-20C3-4376-94D6-EFE554BF2492}"
+      DTS:From="Package\Load_Weapon"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Load_CrimeData" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{FC95B61C-A571-482F-AA68-4C5095EC9446}"
+      DTS:From="Package\Load_CrimeData"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\Execute SQL Task" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 6]"
+      DTS:CreationName=""
+      DTS:DTSID="{5E0EE371-80FD-4F03-9866-4BDB5AA70C38}"
+      DTS:From="Package\Load_CrimeCodeDesc"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 6"
+      DTS:To="Package\Load_Status" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\Execute SQL Task"
+          TopLeft="170.833323999412,493.999996564786" />
+        <NodeLayout
+          Size="129.6,41.6"
+          Id="Package\Load_Area"
+          TopLeft="174.166660428875,58.26666667872" />
+        <NodeLayout
+          Size="184,41.6"
+          Id="Package\Load_CrimeCodeDesc"
+          TopLeft="154.999991531174,193.466666027837" />
+        <NodeLayout
+          Size="156.8,41.6"
+          Id="Package\Load_CrimeData"
+          TopLeft="165.833327550855,416.133333827522" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Load_PremiseCode"
+          TopLeft="154.166661521627,127.800000235041" />
+        <NodeLayout
+          Size="136.8,41.6"
+          Id="Package\Load_Status"
+          TopLeft="172.499993853271,266.6666667872" />
+        <NodeLayout
+          Size="146.4,41.6"
+          Id="Package\Load_Weapon"
+          TopLeft="167.499994126459,346.600000271201" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="239.166660975251,99.86666667872">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,27.9333335563209"
+              Start="0,0"
+              End="0,20.4333335563209">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.4333335563209" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="243.1833265264,169.400000235041">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,24.0666657927962"
+              Start="0,0"
+              End="0,16.5666657927962">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.5666657927962" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="240.799993989865,308.2666667872">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38.3333334840005"
+              Start="0,0"
+              End="0,30.8333334840005">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.8333334840005" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="242.466660838657,388.200000271201">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,27.933333556321"
+              Start="0,0"
+              End="0,20.433333556321">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.433333556321" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="244.233327550855,457.733333827522">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="8.99999644855689,36.2666627372637"
+              Start="0,0"
+              End="8.99999644855689,28.7666627372637">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.1333313686318" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.1333313686318"
+                    Point2="0,18.1333313686318"
+                    Point3="4,18.1333313686318" />
+                  <mssgle:LineSegment
+                    End="4.99999644855689,18.1333313686318" />
+                  <mssgle:CubicBezierSegment
+                    Point1="4.99999644855689,18.1333313686318"
+                    Point2="8.99999644855689,18.1333313686318"
+                    Point3="8.99999644855689,22.1333313686318" />
+                  <mssgle:LineSegment
+                    End="8.99999644855689,28.7666627372637" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 6]"
+          TopLeft="243.949992692222,235.066666027837">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31.6000007593633"
+              Start="0,0"
+              End="0,24.1000007593633">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.1000007593633" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Load_Area">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Load_Area\OLE DB Destination"
+          TopLeft="339.99998142322,144.733332326876" />
+        <NodeLayout
+          Size="151.2,41.6"
+          Id="Package\Load_Area\Flat File Source"
+          TopLeft="344.999981150032,58.0666662628783" />
+        <EdgeLayout
+          Id="Package\Load_Area.Paths[Flat File Source Output]"
+          TopLeft="423.099981286626,99.6666662628783">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,45.0666660639974"
+              Start="0,0"
+              End="0,37.5666660639974">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.5666660639974" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load_Area\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Load_CrimeCodeDesc">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Load_CrimeCodeDesc\OLE DB Destination"
+          TopLeft="364.166646769478,157.733332236475" />
+        <NodeLayout
+          Size="151.2,41.6"
+          Id="Package\Load_CrimeCodeDesc\Flat File Source"
+          TopLeft="359.166647042666,69.333332851198" />
+        <EdgeLayout
+          Id="Package\Load_CrimeCodeDesc.Paths[Flat File Source Output]"
+          TopLeft="434.766647042666,110.933332851198">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="14.9999997268122,46.7999993852775"
+              Start="0,0"
+              End="14.9999997268122,39.2999993852775">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.3999996926387" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.3999996926387"
+                    Point2="0,23.3999996926387"
+                    Point3="4,23.3999996926387" />
+                  <mssgle:LineSegment
+                    End="10.9999997268122,23.3999996926387" />
+                  <mssgle:CubicBezierSegment
+                    Point1="10.9999997268122,23.3999996926387"
+                    Point2="14.9999997268122,23.3999996926387"
+                    Point3="14.9999997268122,27.3999996926387" />
+                  <mssgle:LineSegment
+                    End="14.9999997268122,39.2999993852775" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load_CrimeCodeDesc\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Load_CrimeData">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="151.2,41.6"
+          Id="2"
+          TopLeft="379.999979237716,97.9333326523171" />
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="99"
+          TopLeft="374.999979510904,195.866665304634" />
+        <EdgeLayout
+          Id="160"
+          TopLeft="458.09997937431,139.533332652317">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,56.3333326523169"
+              Start="0,0"
+              End="0,48.8333326523169">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,48.8333326523169" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\Load_PremiseCode">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Load_PremiseCode\OLE DB Destination"
+          TopLeft="104.999994263053,277.333331404792" />
+        <NodeLayout
+          Size="151.2,41.6"
+          Id="Package\Load_PremiseCode\Flat File Source"
+          TopLeft="119.166660155687,182.866665395035" />
+        <EdgeLayout
+          Id="Package\Load_PremiseCode.Paths[Flat File Source Output]"
+          TopLeft="192.68332720937,224.466665395035">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52.8666660097573"
+              Start="0,0"
+              End="0,45.3666660097573">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.3666660097573" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load_PremiseCode\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Load_Status">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Load_Status\OLE DB Destination"
+          TopLeft="364.166646769478,157.733332236475" />
+        <NodeLayout
+          Size="151.2,41.6"
+          Id="Package\Load_Status\Flat File Source"
+          TopLeft="359.166647042666,69.333332851198" />
+        <EdgeLayout
+          Id="Package\Load_Status.Paths[Flat File Source Output]"
+          TopLeft="434.766647042666,110.933332851198">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="14.9999997268122,46.7999993852775"
+              Start="0,0"
+              End="14.9999997268122,39.2999993852775">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.3999996926387" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.3999996926387"
+                    Point2="0,23.3999996926387"
+                    Point3="4,23.3999996926387" />
+                  <mssgle:LineSegment
+                    End="10.9999997268122,23.3999996926387" />
+                  <mssgle:CubicBezierSegment
+                    Point1="10.9999997268122,23.3999996926387"
+                    Point2="14.9999997268122,23.3999996926387"
+                    Point3="14.9999997268122,27.3999996926387" />
+                  <mssgle:LineSegment
+                    End="14.9999997268122,39.2999993852775" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load_Status\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Load_Weapon">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Load_Weapon\OLE DB Destination"
+          TopLeft="400.833311432766,142.999999005596" />
+        <NodeLayout
+          Size="151.2,41.6"
+          Id="Package\Load_Weapon\Flat File Source"
+          TopLeft="401.666644720569,58.9333329235183" />
+        <EdgeLayout
+          Id="Package\Load_Weapon.Paths[Flat File Source Output]"
+          TopLeft="477.266644720569,100.533332923518">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="9.16666671219775,42.4666660820776"
+              Start="0,0"
+              End="9.16666671219775,34.9666660820776">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.2333330410388" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.2333330410388"
+                    Point2="0,21.2333330410388"
+                    Point3="4,21.2333330410388" />
+                  <mssgle:LineSegment
+                    End="5.16666671219775,21.2333330410388" />
+                  <mssgle:CubicBezierSegment
+                    Point1="5.16666671219775,21.2333330410388"
+                    Point2="9.16666671219775,21.2333330410388"
+                    Point3="9.16666671219775,25.2333330410388" />
+                  <mssgle:LineSegment
+                    End="9.16666671219775,34.9666660820776" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load_Weapon\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
